@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: lightgrey;
+    height: 100vh;
+    position: relative;
+}
+
+.slider {
+    width: 70%;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.item {
+    height: 62vh;
+    display: none;
+    position: relative;
+}
+
+.text{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    color: white;
+}
+
+.item.active {
+    display: block;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clear{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.items-container{
+    float: left;
+    width: 70%;
+}
+
+.thumbs{
+    float: left;
+    width: 30%;
+    background-color: rgba(206, 74, 74, 0.5);
+    position: relative;
+}
+
+.img-thumb img{
+    height: 12vh;
+    width: 100%;
+}
+
+
+
+
+/* Stilizzo le frecce */
+.prev, .next {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.prev {
+    top:30px;
+    left: 43%;
+}
+
+.next {
+    bottom:-10px;
+    left: 43%;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255,255,255,0.5);
+}
